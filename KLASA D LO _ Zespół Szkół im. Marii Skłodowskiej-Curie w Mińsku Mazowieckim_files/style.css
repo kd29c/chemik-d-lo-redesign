@@ -1,0 +1,349 @@
+@import url(css/bootstrap.css); 
+@import url(css/responsive.css);
+
+/*
+Theme Name: Zespoł Szkół im. Marii Skłodowskie-Curie w Mińsku Mazowieckim
+Theme URI: http://www.veden.pl
+Description: Szablon strony dla Zespoł Szkół im. Marii Skłodowskie-Curie
+Author: Veden
+Author URI: http://www.veden.pl
+Version: 1.0
+*/
+
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,300italic&subset=latin,latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i,900&subset=latin,latin-ext');
+
+body {font-family: 'Open Sans', 'Segoe UI', Arial,sans-serif; background: #fff; color: #444; overflow-x: hidden; font-size: 14px;}
+
+/*
+KOLORY
+niebieski: 01579b
+niebieski ciemny: 012a60
+*/
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Typography ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+h1,h2,h3,h4,h5,h6 {font-family: 'Lato', sans-serif; margin-top:5px;}
+h1 {font-size: 2.5rem; line-height: 2.7rem; font-weight: 300; text-transform: uppercase; color: #222;margin-top: 0 !important;}
+h2 {font-size: 2rem; line-height: 2.2rem; font-weight: 300; text-transform: uppercase; color: #222;} 
+h3 {font-size: 1.5rem; line-height: 1.7rem; font-weight: 300;}
+h4 {font-size: 1.3rem; line-height: 1.5rem; color: #01579b;}
+h5 {font-size: 1.1rem; line-height: 1.3rem; color: #01579b;}
+h6 {font-size: 0.9rem; line-height: 1.1rem; color: #ccc;}
+
+blockquote {text-transform: uppercase; font-family: 'Lato', sans-serif; color: #777; font-weight: 300; padding: 0 30px; border: 0; margin: 30px 0; text-align: center;}
+
+ul li {list-style: none; list-style-image: url(images/tick-grey.png);}
+a {text-decoration: none !important; color: #01579b;}
+a:hover {color: #012a60;}
+hr {display: block; clear: both; border-top: 1px solid #ddd !important;}
+
+table {border: 1px solid #DDD; width: 100%; max-width: 100%; border-spacing: 0px; border-collapse: collapse; table-layout:fixed}
+table > thead > tr { font-family: 'Lato', sans-serif; vertical-align: middle; background: #2ecc71; color: #fff; text-transform:  uppercase; text-align: center;}
+td, th, tr {padding: 10px; valign: top; border: 1px solid #DDD;}
+table img {display: inline-block !important; width: auto !important; max-width: 100%; height: auto; max-height: 100%;}
+table ul li {list-style-image: none !important; list-style: disc !important;}
+table a {display: block;}
+tfoot {background: #eee;}
+
+.panel-group .panel {border-radius: 0;}
+.panel-group img {display: inline-block;}
+.panel-default:nth-child(even) {border-color: #37a6fe;}
+.panel-default:nth-child(odd) {border-color: #ccc;}
+.panel-default:nth-child(even) > .panel-heading {color: #fff; background-color: #37a6fe; border-color: #37a6fe;}
+.panel-default:nth-child(odd) > .panel-heading {color: #fff; background-color: #ccc; border-color: #ccc;}
+.panel-heading {border-radius: 0 !important;}
+.panel-title {font-size: 20px;}
+.panel-default a:hover, .panel-title a:focus {color: #222; text-decoration: none;}
+
+.alert {border-radius: 0 !important;}
+
+img {max-width: 100%; height: auto; display: block;}
+img.alignright {float:right; margin:0 0 10px 10px;}
+img.alignleft {float:left; margin:0 10px 10px 0;}
+img.aligncenter {display: block; margin-left: auto; margin-right: auto;}
+
+/* Btn */
+.btn {border: 2px solid transparent; text-transform: uppercase; padding: 5px 15px; border-radius: 0; font-size: 14px; font-weight: 700;}
+a.btn:hover {-webkit-animation: pulse .8s; animation: pulse .8s;}
+.btn-default {border-color: #01579b; color: #fff; background-color: #01579b; padding: 5px 15px;}
+.btn-default:hover {border-color: #222; color: #fff; background: #222;}
+.btn-simple {color: #51bf87; text-transform: uppercase; letter-spacing: 1px; font-family: 'Lato', sans-serif; font-weight: 700;}
+.btn-simple:hover {color: #3ba26e;}
+.btn-green {border-color: #4bbe45; border-bottom-color: #3c9837; color: #fff; background-color: #4bbe45; padding: 12px;}
+.btn-green:hover {color: #fff;}
+
+/* Reusable */
+.clear {clear: both;}
+.nobr {white-space: nowrap;}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+header {background: #01579b;}
+header #top {font-size: 13px;}
+header #bottom {background: #fff; padding: 15px 15px 10px; box-shadow: 0 -6px 0 #fff, 0 -4px 8px rgba(0,0,0, .8); margin-top: -10px;}
+#logo {background: url(images/chemik_minsk_mazowiecki_top.png) no-repeat center left; padding-left: 55px; min-height: 60px;}
+#logo:hover {-webkit-animation: pulse .8s; animation: pulse .8s;}
+#logo h1 {font-size: 16px; line-height: 110%; letter-spacing: 0.5px; margin-bottom: 0; font-weight: 700;}
+#logo h5 {color: #717171; font-size: 16px; line-height: 110%; margin-top: 0;}
+#search {margin: 15px 0; color: #9ebfd9;}
+header .social {margin: 15px 0; color: #9ebfd9; text-transform: uppercase; text-align: right;}
+header .social p, header .social ul {display: inline-block;}
+header .social li {margin-left: 10px;}
+header .social a img:hover {-webkit-animation: pulse .8s; animation: pulse .8s;}
+/* Wyszukiwarka */
+#search {color: #fff; margin-top: 0; letter-spacing: 1px; font-weight: 300;}
+#search form {border-bottom: 1px solid #477aa2;}
+#search .screen-reader-text {display: none !important;}
+#search .search-field {background: transparent; border: none;}
+#search input[type="search"] {background: transparent; border: none; width: 100%; color: #fff;}
+#search input[type="search"]::-webkit-input-placeholder {color: #fff;}
+#search input[type="search"]::-moz-placeholder {color: #fff;}
+#search input[type="search"]:-ms-input-placeholder {color: #fff;}
+#search input[type="search"]:-moz-placeholder {color: #fff;} 
+#search input[type="image"] {background: transparent; border: none; box-shadow: none !important; text-transform: uppercase; color: #fff !important; max-width: 10%; padding-top: 10px;}
+#search label {font-weight: 300 !important; margin-bottom: 0 !important; width: 90%;}
+.szkola {float: right; display: inline-block; max-width: 100px;}
+/*Licznik*/
+.countdown_summer {}
+.countdown_summer h2 {font-size: 15px; color: #fff; display: inline-block;} 
+.ujic-hold {display: inline-block; width: 100px;}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Menu ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Nagłówek - dni do wakacji */
+header #top .countdown_summer {text-transform: uppercase; font-family: 'Lato', sans-serif; font-weight: 700;}
+.countdown_txt {display: none !important;}
+header #top ul {margin: 0; padding: 0;}
+header #top ul li {display: inline-block; text-align: right;}
+/* Nagłówek - główne menu */
+#bottom nav {display: inline-block;}
+#mega_main_menu > .menu_holder > .menu_inner > ul > li > .item_link {padding: 0 13px !important;}
+#bottom #mega_main_menu > .menu_holder > .menu_inner > ul > li:first-of-type > .item_link {padding: 0 13px 0 0 !important;}
+#mega_main_menu.header-menu > .menu_holder > .menu_inner > ul > li > .item_link > .link_content > .link_text {max-width: 100px !important;}
+/* Nagłówek - menu po godzinach */
+.student-menu {background: #012a60; font-family: 'Lato', sans-serif !important; font-weight: 300; box-shadow: 0 -6px 0 #fff, 0 1px 6px rgba(0,0,0, .8) !important; /*-moz-box-shadow: 0px 7px 5px -2px rgba(0,0,0, .35), 7px 0px 5px -2px rgba(0,0,0, .35), -7px 0px 5px -2px rgba(0,0,0, .35); -webkit-box-shadow: 0px 7px 5px -2px rgba(0,0,0, .35), 7px 0px 5px -2px rgba(0,0,0, .35), -7px 0px 5px -2px rgba(0,0,0, .35); box-shadow: 0px 7px 5px -2px rgba(0,0,0, .35), 7px 0px 5px -2px rgba(0,0,0, .35), -7px 0px 5px -2px rgba(0,0,0, .35); */}
+
+#uwaga {text-align: center; padding: 15px 0; font-family: 'Lato', sans-serif; font-size: 17px; background: url(images/bg_uwaga.png); border-bottom: 1px solid #dadada;}
+#uwaga h2 {font-weight: 700; color: #01579b;}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Baner ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */ 
+.breadcrumbs {color: #92918e; font-family: 'Lato', sans-serif; font-weight: 300; letter-spacing: 1px; font-size: 13px; margin-bottom: 15px;}
+.breadcrumbs a {color: #92918e;}
+.breadcrumbs a:hover {color: #444;}
+
+#baner {font-family: 'Lato', sans-serif; border-top: 1px solid #dadada; border-bottom: 1px solid #dadada;}
+#baner .cycloneslider-template-default .cycloneslider-caption {max-width: 400px; background-image: none; text-transform: uppercase; text-align: right; background: -webkit-linear-gradient(-45deg, rgba(243,206,73,0.8) 0, rgba(239,88,6,0.8) 100%); background: -moz-linear-gradient(135deg, rgba(243,206,73,0.8) 0, rgba(239,88,6,0.8) 100%); background: linear-gradient(135deg, rgba(243,206,73,0.8) 0, rgba(239,88,6,0.8) 100%); text-shadow: 1px 1px 1px rgba(0,0,0,0.2) ; left: auto;   right: 10%; bottom: 25px; padding: 10px;}
+#baner .cycloneslider-template-default .cycloneslider-caption-description {font-size: 20px; font-weight: 300; line-height: 110%;}
+#baner .cycloneslider-template-default .cycloneslider-pager {top: auto; bottom: 20px; left: 45%;}
+#baner .cycloneslider-template-default .cycloneslider-pager span {width: 20px; height: 20px; border-radius: 10px; display: inline-block;}
+#baner .cycloneslider-template-default .cycloneslider-pager span.cycle-pager-active {background: rgba(239,88,6,0.89); -webkit-box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.3) ; box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.3) ; text-shadow: 1px 1px 1px rgba(0,0,0,0.2) ;}
+#baner .cycloneslider-template-default .cycloneslider-pager span{background: rgba(255,255,255,0.89); -webkit-box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.3) ; box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.3) ; text-shadow: 1px 1px 1px rgba(0,0,0,0.2) ;}
+#baner span {display: block; text-transform: none; font-style: italic; font-style: 14px;}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Ogólne ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+#main_content {margin-top: 20px; margin-bottom: 40px;}
+#main_content ul {color: #6d6d6d; line-height: 130%; margin: 10px 0 10px; padding: 0 0 0 20px;}
+#main_content ul ul {padding-top: 15px; padding-left: 20px;}
+#main_content ul ul li {list-style-image: none; list-style: disc;}
+#main_content li {padding-bottom: 10px; list-style-image: url(images/tick-grey.png);}
+#main_content h1 + h3 {margin-top: -15px;}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Footer ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+#chemik_loga {background: #f6f6f6;}
+footer {font-family: 'Lato', 'Open Sans', sans-serif; background: #070707; color: #8c8c8c; font-size: 14px;}
+footer .col-md-4, footer .col-md-3 {padding-top: 30px; padding-bottom: 30px;}
+footer h4 {text-transform: uppercase; color: #fff; letter-spacing: 1px; font-size: 16px;}
+footer ul {padding: 0; margin: 0 0 0 20px;}
+footer li {list-style-image: url(images/tick.png); padding: 0 0 5px;}
+footer ul a {color: #8c8c8c;}
+footer ul a:hover {color: #ccc;}
+footer a {color: #51bf87;}
+footer a:hover {color: #fff;}
+footer #chemik {background: url(images/liceum_chemik_minsk_mazowiecki.jpg) no-repeat center center; margin-top: -30px; min-height: 300px; padding-top: 60px}
+footer #logo {background: url(images/chemik_minsk_mazowiecki.png) no-repeat center left; padding-left: 70px; padding-top: 5px; min-height: 72px;}
+footer #logo h1 {font-size: 19px; font-weight: 700; line-height: 110%; letter-spacing: 0.5px; margin-bottom: 0; color: #fff;}
+footer #logo h5 {color: #052f58; font-size: 17px; line-height: 110%; margin-top: 0;}
+footer #logo:hover {-webkit-animation: none;}
+footer address {color: #fff; font-size: 18px; margin: 20px 0 30px 70px;}
+footer .footer_sidebar {margin-bottom: 15px;}
+.tel {background: url(images/telephone.png) no-repeat center left; padding-left: 25px;}
+.fax {background: url(images/fax.png) no-repeat center left; padding-left: 25px;}
+.mail {background: url(images/mail.png) no-repeat center left; padding-left: 25px;}
+.hours {background: url(images/clock.png) no-repeat center left; padding-left: 25px;}
+#copy {background: #000; color: #303030; padding: 20px 0 10px;}
+#copy a {color: #303030;}
+#copy a:hover {color: #777;}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Dodatkowe style ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.bg_news {background: url(images/bg_news.jpg) no-repeat center center fixed; padding: 50px 0 70px;}
+.bg_news h1 {text-transform: none;}
+.bg_news h4 {color: #999; font-weight: 700;}
+
+/* Galeria */
+.fat-shortcode-5954f987dae56 .fat-portfolio-item .fat-hover-wrap {background: -webkit-linear-gradient(-45deg, rgba(243,206,73,0.8) 0, rgba(239,88,6,0.8) 100%); background: -moz-linear-gradient(135deg, rgba(243,206,73,0.8) 0, rgba(239,88,6,0.8) 100%); background: linear-gradient(135deg, rgba(243,206,73,0.8) 0, rgba(239,88,6,0.8) 100%); text-shadow: 1px 1px 1px rgba(0,0,0,0.2) ;}
+.fat-portfolio-shortcode .fat-item-wrap .fat-portfolio-item img {border: 1px solid #cfcfcf;}
+.detail-container, .portfolio-info-label {display: none !important;}
+.fat-portfolio-single-page-title {margin-top: 40px;}
+
+/* Hover */
+.hover-item {display:block !important; position:relative !important; overflow: hidden; margin-bottom: 5px; border: 1px solid #d6d6d6;}
+.hover-item-overlay {visibility:hidden; opacity:0; transition:visibility 0s linear 0.5s,opacity 0.5s linear;}
+.hover-item a {color:transparent;}
+.hover-item a:hover .hover-item-overlay {visibility:visible; opacity:1; transition-delay:0s; text-align: center; position: absolute; background: -webkit-linear-gradient(-45deg, rgba(243,206,73,0.8) 0, rgba(239,88,6,0.8) 100%); background: -moz-linear-gradient(135deg, rgba(243,206,73,0.8) 0, rgba(239,88,6,0.8) 100%); background: linear-gradient(135deg, rgba(243,206,73,0.8) 0, rgba(239,88,6,0.8) 100%); text-shadow: 1px 1px 1px rgba(0,0,0,0.2) ; color: #fff; width:100%; height:100%; text-shadow: 0 1px 2px rgba(0, 0, 0, .6);}
+.hover-item-overlay span {font-size: 2rem; margin: auto; position: absolute; top: 40%; left: 0; bottom: 0; right: 0}
+.hover-item img {width: 100%; height: auto;}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Animacja BTN ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*!
+Animate.css - http://daneden.me/animate
+Licensed under the MIT license - http://opensource.org/licenses/MIT
+Copyright (c) 2013 Daniel Eden
+*/
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.pulse {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+
+/* Cookies */
+ol {padding: 10px 15px;}
+ol > li {padding-bottom: 10px; list-style: decimal;}
+ol > li > ul {padding: 5px 15px 10px;}
+ol > li > ul > li {padding-bottom: 5px; list-style-image: none !important; list-style-type: lower-alpha !important; color: #888;}
+div#pronamic_cookie_holder {background: #171717;}
+#pronamic_cookie_holder  a.pronamic_cookie_close_button {background: #f39c12; color: #222;}
+#pronamic_cookie_holder  a.pronamic_cookie_close_button:hover {background: #c67900;}
+
+/* Paginacja */
+.navigation {margin: 20px 0; font-family: 'Open Sans', 'Segoe UI',Tahoma, sans-serif; font-size: 13px;}
+.navigation a {color: #ccc; border: 1px solid #ccc; background: #fff; padding: 5px 10px; font-weight: 700;}
+.navigation a:hover {background: #ee742e; border: 1px solid #ee742e; color: #fff;}
+.navigation .current {font-weight: bold; color: #fff; font-weight: bold; padding: 5px 10px; background: #ccc; border: 1px solid #ccc;}
+.navigation .prev, .navigation .next {font-size: bold;}
+
+/* Fromulare kontaktowe*/
+input[type='text'], input[type='email'], input[type='tel'], textarea {border: 1px solid #cfcfcf !important; height: 36px; padding: 7px 10px; margin: 0; width: 100%; font-size: 14px; background: #fff; color: #444; cursor: pointer; margin-bottom: 5px;}
+textarea {height: 105px; width: 100%;}
+input[type="submit"] {border: 2px solid #01579b; color: #fff; text-transform: uppercase; padding: 5px 15px; border-radius: 0; font-size: 14px; font-weight: 700; background: #01579b;}
+input[type="submit"]:hover {-webkit-animation: pulse .8s; animation: pulse .8s; border-color: #222; color: #fff; background: #222;}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Strona Główna ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+#hello {text-align: center; background: url(images/chemik.jpg) no-repeat center center; min-height: 280px; padding: 30px;}
+#hello h1 {font-weight: 700; font-size: 32px; margin-bottom: 25px;}
+#hello h3 {color: #3498db; font-size: 21px; margin-bottom: 10px;}
+#hello h4 {color: #444; font-size: 20px;}
+
+#chemik_dzis {padding: 70px 0; background: url(images/chemik_minsk_mazowiecki.jpg) no-repeat center center fixed;}
+#chemik_dzis h2 {color: #fff; font-weight: 300; font-size: 36px; text-transform: none;}
+#chemik_dzis a h4 {color: #fff; text-align: right; text-transform: uppercase; font-weight: 300;}
+#chemik_dzis .col-sm-6 {height: 100px; display:table;}
+#chemik_dzis h4 {display:table-cell; vertical-align:middle; font-size: 18px;}
+#dzwonki {background: url(images/bg_ico_dzwonki.png) no-repeat center center;}
+#publikacje {background: url(images/bg_ico_publikacje.png) no-repeat center center;}
+#kalendarium {background: url(images/bg_ico_kalendarium.png) no-repeat center center;}
+#rada {background: url(images/bg_ico_rada_rodzicow.png) no-repeat center center;}
+a:hover #dzwonki, a:hover #publikacje, a:hover #kalendarium, a:hover #rada {-webkit-animation: pulse .8s; animation: pulse .8s;}
+
+.home_content {margin-top: 30px; margin-bottom: 30px;}
+.home_content h2 {margin-bottom: 30px;}
+.box_home {padding: 20px; background: #222; color: #fff; font-size: 13px; margin-bottom: 15px; min-height: 210px;}
+.box_home h4 {color: #fff; text-decoration: underline; text-transform: uppercase; font-weight: 300; }
+.box_home a {color: #fff; text-transform: uppercase; padding: 10px 0; font-family: 'Lato', 'Open Sans', sans-serif; list-style: 1px;}
+.box_home a:hover {color: #fff;}
+.rekrutacja {min-height: 435px; position:relative; padding: 40px; font-size: 18px; font-weight: 300; background: url(images/bg_rekrutacja.jpg) no-repeat center center; background-size: cover;}
+.rekrutacja:before{position:absolute; content:''; position: absolute; top: 20px; bottom: 20px; left:20px; right: 20px; border:1px solid #fff;}
+.rekrutacja a {text-transform: none;}
+.rekrutacja ul {margin: 15px 0;}
+.liceum {background: url(images/bg_liceum.jpg) no-repeat center center; background-size: cover;}
+.technika {background: url(images/bg_technika.jpg) no-repeat center center; background-size: cover;}
+.msp {background: url(images/bg_msp.jpg) no-repeat center center; background-size: cover;}
+.sb {background: url(images/bg_sb.jpg) no-repeat center center; background-size: cover;}
+
+.news_home .single_box {margin-bottom: 20px; min-height: 500px;}
+
+.srebrna-szkola {background: rgba(0,0,0,0.91); text-align: center; color: #fff; font-size: 15px; padding: 15px; margin-top: 150px;}
+.srebrna-szkola img {display: inline-block; margin: -100px auto 15px; }
+
+.osiagniecia {}
+.osiagniecia ul {padding-left: 20px;}
+.osiagniecia li {padding-bottom: 15px;}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Aktualności ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+h2.archive {margin-bottom: 20px; text-transform: none; font-size: 1.5em; color: #777;}
+h2.archive strong {text-transform: uppercase;}
+.dane {font-size: 12px; font-weight: 400; color: #919191;}
+.dane a {color: #919191; font-weight: 700;}
+.dane a:hover {color: #777;}
+
+/* Aktulaności - strona ketegorii */
+.single {margin-bottom: 15px; padding-bottom: 15px; border-bottom: solid 1px #e5e5e5;}
+.single h4 {font-weight: 700;}
+.single h4 a {color: #222;}
+.single h4 a:hover {color: #ee742e;}
+
+/* Blog - aktualności, boxy */
+.single_box {font-size: 13px; line-height: 130%;}
+div.single_box h4 {margin-bottom: 5px; margin-top: 0; line-height: 110% !important;}
+div.single_box h4 a {color: #222; font-size: 16px; line-height: 110% !important;}
+.single_box h4 a:hover {color: #777;}
+
+/* Single */
+article >article.single {border-bottom: 0;}
+article >article.single h4 {color: #222;}
+article >article.single .dane {border-top: 1px solid #e5e5e5; padding-top: 10px; margin-top: 35px;}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Panel boczny ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+#mega_main_menu > .menu_holder > .menu_inner > .mega_main_menu_ul {font-family: 'Lato', sans-serif !important;}
+#mega_main_menu.direction-vertical > .menu_holder > .menu_inner > ul > li {border-bottom: 1px solid #fff !important;}
+#mega_main_menu.mega_main_sidebar_menu.direction-vertical > .menu_holder > .menu_inner > ul > li > .item_link > .link_content {height: auto !important;}
+#mega_main_menu.mega_main_sidebar_menu.direction-vertical > .menu_holder > .menu_inner > ul > li > .item_link {height: auto !important;}
+.sidebar {margin-bottom: 25px;}
+.sidebar h3 {color: #777;}
+.sidebar ul {padding: 0 !important;}
+.sidebar li {list-style-image: none !important; padding-left: 0; color: #aaa;}
+.sidebar a {color: #666;}
+.sidebar a:hover {color: #ee742e;}
